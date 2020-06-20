@@ -49,6 +49,7 @@ $(function() {
 //     }
 // }
 
+
     WHEN I click into a timeblock
     THEN I can enter an event
         click event on the timeblock variable 
