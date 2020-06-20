@@ -1,11 +1,10 @@
 /** @format */
 
-//this is from offic hours video of this hw
-
 //setting the time w moment js... parse it appropriately
 //then applying the css classes based on time of day within the updateTime function
 $(function () {
 	updateTime();
+	onLoad();
 	setInterval(function () {
 		//format the time as Day, Month date & time
 		updateTime();
@@ -73,29 +72,19 @@ $(function () {
 
 	//variables for the events
 
-	//WHEN I click the save button for that timeblock
-	//  THEN the text for that event is saved in local storage
-	//    click event on save button - trigger to add to local storage
-	//       on saveBtn event listener store the description
-	//    var storeDescription
-	//  localStorage setItem storeDescription
-	// local storage getItem
+	//click on save button, save to local storage, stays after reload
 
-	//click on save button, save to local storage
+	function onLoad() {
+		$(".btn").on("click", function (event) {
+			//console.log(event);
+			var value = $(this).siblings(".description").val();
+			var time = $(this).parent().attr("id");
+			localStorage.setItem(time, value);
 
-	var value = $(this).siblings(".description").val();
-	var time = $(this).parent().attr("id");
+			//get it to stay on reload
+			console.log(localStorage.getItem(time));
 
-	$(".saveBtn").on("click", function (event) {
-		console.log(event);
-		value = $(this).siblings(".description").val();
-		time = $(this).parent().attr("id");
-		localStorage.setItem(time, value);
-		console.log(localStorage.getItem(time, value));
-	});
-
-	var storedEvents = localStorage.getItem(time, value);
-	
-	
-
+			$(".text9").text(localStorage.getItem(time));
+		});
+	}
 });
