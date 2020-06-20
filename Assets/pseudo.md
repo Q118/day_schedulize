@@ -34,20 +34,8 @@ $(function() {
     WHEN I view the timeblocks for that day
     THEN each timeblock is color coded to indicate whether it is in the past, present, or future
         adding a css class, past present 0r future based on the time 0f day (moment.js)
-// if current time === PresentBLock {
-//     addClass present
-// } 
-// else if {
-//     current time < PresentBLock {
-//         remove present class 
-//         addclass past
-//     }
-//     else {
-//         remove past
-//         remove present 
-//         add present
-//     }
-// }
+        html has all on past to start so will update the present and future
+
 
 
     WHEN I click into a timeblock
