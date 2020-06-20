@@ -19,9 +19,23 @@ $(function () {
 		timeEl.text(formattedTime);
 		dateEl.text(formattedDate);
 		//color-coding the time blocks with the css classes based on time of day
-	if (formattedTime > "7:04" && formattedTime < "8:00") {
-		console.log("btwn");
-	}
-	
+		if (formattedTime > "9:00" && formattedTime < "10:00") {
+			//add present class
+			$("#hour-9").addClass("present");
+		} else if (formattedTime > "10:00" && formattedTime < "11:00") {
+			//add present class
+			$("#hour-10").addClass("present");
+		} else if (formattedTime > "11:00" && formattedTime < "12:00") {
+			//add present class
+			$("#hour-11").addClass("present");
+		} else if (formattedTime > "12:00" && formattedTime < "1:00") {
+			//add present class
+			$("#hour-12").addClass("present");
+		}  else if (formattedTime > "11:00" && formattedTime < "12:00") {
+			//add present class
+			$("#hour-9").addClass("present");
+		}
+
+		//use or for
 	}
 });
