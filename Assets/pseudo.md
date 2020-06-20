@@ -2,7 +2,7 @@
 
     WHEN I open the planner
     THEN the current day is displayed at the top of the calendar
-        use moment.js to display date/time
+        use moment.js to display date/time 
         include moment js cdn 
         on page load date displayed with moment js 
         var current time 
@@ -34,9 +34,6 @@ $(function() {
     WHEN I view the timeblocks for that day
     THEN each timeblock is color coded to indicate whether it is in the past, present, or future
         adding a css class, past present 0r future based on the time 0f day (moment.js)
-       
-
-
 // if current time === PresentBLock {
 //     addClass present
 // } 
