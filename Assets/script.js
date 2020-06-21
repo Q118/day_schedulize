@@ -70,12 +70,30 @@ $(function () {
 		}
 	}
 
-	//variables for the events
+	//variables for the text of the user inputted events
+	var nineAm = $("#text9");
+	var tenAm = $("#text10");
+	var elevenAm = $("#text11");
+	var twelvePm = $("#text12");
+	var onePm = $("#text1");
+	var twoPm = $("#text2");
+	var threePm = $("#text3");
+	var fourPm = $("#text4");
+	var fivePm = $("#text5");
+
+	var hour = moment().hours();
+	var userInput;
+	var hourSpan;
 
 	//click on save button, save to local storage, stays after reload
 
 	function onLoad() {
-		$(".btn").on("click", function (event) {
+
+		//var user9 = JSON.parse(localStorage.getItem("09:00am"));
+		//nineAm.val(user9);
+
+
+		$(".btn").click(function (event) {
 			//console.log(event);
 			var value = $(this).siblings(".description").val();
 			var time = $(this).parent().attr("id");
@@ -84,7 +102,7 @@ $(function () {
 			//get it to stay on reload
 			console.log(localStorage.getItem(time));
 
-			$(".text9").text(localStorage.getItem(time));
+			$("textarea").text(localStorage.getItem(time));
 		});
 	}
 });

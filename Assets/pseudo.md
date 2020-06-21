@@ -46,3 +46,16 @@ $(function() {
     WHEN I refresh the page
     THEN the saved events persist
         probably wiht local storage or Ajax
+
+        the approach i followed was, have a seperate function to retrive 
+        and display value of my local storage. and i called this function 
+        as my first step in the script. so when ever my page loads and 
+        th script is called the function executes first and displays value
+
+        //inside script after code to display the current date
+        onLoad();
+        function onLoad() {
+            //code to retrive from local storage and display on the page
+            }
+
+            There is a function called "each" in jQuery which works like a for loop on elements with common attribute. I used that to loop through to get id of the element which is our key to local variable. Once you get the id, using localStorage.getItem(id); you can retrieve the value stored for that time stamp in local storage. This is how i approached the scenario. But I am sure there can be other ways too.
