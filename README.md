@@ -31,7 +31,7 @@
  
 URL for my deployed page: https://q118.github.io/day_schedulize/
 
-![]()
+![](https://github.com/Q118/day_schedulize/blob/master/Assets/Screenshot.png)
 
 
 
